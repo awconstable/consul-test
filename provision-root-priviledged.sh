@@ -30,7 +30,7 @@ apt-get -y install kubectl docker-ce docker-compose
 
 usermod -aG docker vagrant
 
-cd /usr/local/bin
+cd /usr/local/bin || exit
 wget -nc -O - https://releases.hashicorp.com/consul/1.6.3/consul_1.6.3_linux_amd64.zip | bsdtar -xvf-
 chmod a+x consul
 
