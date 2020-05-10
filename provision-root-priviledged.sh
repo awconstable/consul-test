@@ -26,12 +26,12 @@ echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | tee -a /etc/apt/s
 
 apt-get update
 
-apt-get -y install kubectl docker-ce docker-compose
+apt-get -y install kubectl docker-ce docker-compose socat
 
 usermod -aG docker vagrant
 
 cd /usr/local/bin || exit
-wget -nc -O - https://releases.hashicorp.com/consul/1.6.3/consul_1.6.3_linux_amd64.zip | bsdtar -xvf-
+wget -nc -O - https://releases.hashicorp.com/consul/1.7.3/consul_1.7.3_linux_amd64.zip | bsdtar -xvf-
 chmod a+x consul
 
 apt-get -y autoremove
